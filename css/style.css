@@ -30,6 +30,36 @@ header{
 }
 
 
+/* -----------------MAIN----------------- */
+main{
+  margin-top: 80px;
+  display: flex;
+}
+
+/* ASIDE BOX */
+aside{
+  background-color: #000;
+  width: 200px;
+  height: calc( 100vh - 160px);
+  color: white;
+}
+
+aside div{
+  margin-left: 10px;
+}
+
+aside img{
+  width: 20px;
+}
+
+.boxes{
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  width: calc( 100% - 200px );
+}
+
+
 /* -----------------FOOTER----------------- */
 footer{
   width: 100%;
