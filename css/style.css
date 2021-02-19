@@ -43,7 +43,7 @@ header{
 main{
   margin-top: 80px;
   display: flex;
-  background-color: #121212;
+  background-color: #141922;
 }
 
 /* ASIDE BOX */
@@ -142,6 +142,42 @@ aside a{
   height: 100%;
   width: calc( 100% - 200px );
   color: white;
+}
+
+.navigazione{
+  width: 100%;
+  text-align: center;
+}
+
+.navigazione li{
+  display: inline-block;
+  list-style: none;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 20px 10px;
+}
+
+.album-square, .album-circle{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%
+}
+
+.boxes h3, .boxes p{
+  width: 100%;
+}
+
+.album-square img, .album-circle img{
+  width: 200px;
+  height: 200px;
+}
+
+.album-square img{
+
+}
+
+.album-circle img{
+
 }
 
 
