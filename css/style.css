@@ -5,10 +5,14 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+body{
+  background-color: #000;
+}
+
 /* -----------------HEADER----------------- */
 header{
   width: 100%;
-  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
   top: 0;
 }
@@ -16,13 +20,8 @@ header{
 .upgrade{
   height: 80px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
-}
-
-.upgrade img{
-  width: 150px;
-  margin-left: 20px;
 }
 
 .upgrade button{
@@ -41,22 +40,29 @@ header{
 
 /* -----------------MAIN----------------- */
 main{
-  margin-top: 80px;
   display: flex;
   background-color: #141922;
+  height: calc( 100vh - 80px );
 }
 
 /* ASIDE BOX */
 aside{
   background-color: #000;
   width: 200px;
-  height: calc( 100vh - 160px);
+  height: calc( 100vh - 80px);
   font-weight: bold;
   font-size: 14px;
   color: rgba( 255 , 255, 255 , 0.5);
   display: flex;
   flex-direction: column;
   overflow: auto;
+  z-index: 10;
+}
+
+.spotify-logo{
+  width: 150px;
+  margin-top: 20px;
+  margin-left: 20px;
 }
 
 aside div{
@@ -101,7 +107,7 @@ aside a{
 }
 
 .border-left-green{
-  border-left: 5px solid #6df719;
+  border-left: 2px solid #6df719;
 }
 
 .user{
@@ -142,11 +148,21 @@ aside a{
   height: 100%;
   width: calc( 100% - 200px );
   color: white;
+  padding: 20px;
+  overflow: auto;
+  padding-top: 80px;
+}
+
+.boxes > div:not(:first-child){
+  margin-bottom: 40px;
 }
 
 .navigazione{
   width: 100%;
   text-align: center;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 12px;
 }
 
 .navigazione li{
@@ -155,6 +171,14 @@ aside a{
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.5);
   margin: 20px 10px;
+}
+
+.navigazione ul li:first-child::after{
+  content: "";
+  display: block;
+  border-bottom: 2px solid #6df719;
+  width: 25px;
+  margin: 5px auto 0;
 }
 
 .album-square, .album-circle{
@@ -167,13 +191,33 @@ aside a{
   width: 100%;
 }
 
+.boxes h3{
+  font-size: 24px;
+  margin-bottom: 10px
+}
+
+.boxes h5{
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.boxes p{
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+}
+
 .album-square img, .album-circle img{
   width: 200px;
   height: 200px;
 }
 
-.album-square img{
+.album-square > div, .album-circle > div{
+  text-align: center;
+  margin-top: 20px;
+}
 
+.album-square > div:not(:last-child), .album-circle > div:not(:last-child){
+  margin-right: 20px;
 }
 
 .album-circle img{
