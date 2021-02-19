@@ -60,7 +60,7 @@ aside{
 }
 
 .spotify-logo{
-  width: 150px;
+  width: 130px;
   margin-top: 20px;
   margin-left: 20px;
 }
@@ -228,7 +228,7 @@ aside a{
 /* -----------------FOOTER----------------- */
 footer{
   width: 100%;
-  background-color: #323232;
+  background-color: #282828;
   position: fixed;
   bottom: 0;
 }
@@ -238,6 +238,39 @@ footer{
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.brano{
+  display: flex;
+  justify-content: space-between;
+  color: rgba( 255, 255, 255, 0.5);
+  width: 200px;
+}
+
+.brano > div:not(:last-child){
+  display: flex;
+}
+
+.brano > div > div{
+  align-self: center;
+  margin-left: 10px;
+}
+
+.brano img{
+  width: 50px;
+  margin-left: 20px;
+}
+
+.brano h6{
+  color: white;
+}
+
+.brano i{
+  margin-right: 5px;
+}
+
+.brano > div:last-child{
+  align-self: center;
 }
 
 .temp{
