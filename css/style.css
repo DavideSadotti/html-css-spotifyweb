@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* -----------------HEADER----------------- */
@@ -20,13 +21,21 @@ header{
 }
 
 .upgrade img{
-  width: 10%;
-  margin-left: 10px;
+  width: 150px;
+  margin-left: 20px;
 }
 
 .upgrade button{
   height: 40px;
-  margin-right: 10px;
+  margin-right: 20px;
+  text-transform: uppercase;
+  color: white;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 25px;
+  padding: 5px 15px;
+  font-size: 11px;
+  font-weight: bold;
 }
 
 
@@ -34,6 +43,7 @@ header{
 main{
   margin-top: 80px;
   display: flex;
+  background-color: #121212;
 }
 
 /* ASIDE BOX */
@@ -41,22 +51,97 @@ aside{
   background-color: #000;
   width: 200px;
   height: calc( 100vh - 160px);
-  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  color: rgba( 255 , 255, 255 , 0.5);
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
 }
 
 aside div{
-  margin-left: 10px;
+  margin-bottom: 20px;
+}
+
+aside h4{
+  text-transform: uppercase;
+  padding-left: 20px;
+}
+
+aside li{
+  list-style: none;
+  padding: 5px 0 5px 20px;
+}
+
+aside li:not(.border-left-green), aside h4{
+  margin-left: 5px;
+}
+
+aside span{
+  padding: 8px 10px;
+  background-color: white;
+  color: black;
+  margin-right: 5px;
+  display: inline-block;
 }
 
 aside img{
   width: 20px;
+  margin-right: 5px;
+  vertical-align: bottom;
 }
 
+aside a{
+  text-decoration: none;
+  color: rgba( 255 , 255, 255 , 0.5);
+}
+
+.clr-wht, .clr-wht a{
+  color: white;
+}
+
+.border-left-green{
+  border-left: 5px solid #6df719;
+}
+
+.user{
+  margin: auto 0 0 25px;
+}
+
+.user p{
+  display: inline-block;
+}
+
+.download-img{
+  width: 15px;
+}
+
+.user-img{
+  background-color: gray;
+  border-radius: 50%;
+  width: 25px;
+  vertical-align: middle;
+}
+
+.user-name{
+  color: white;
+}
+
+.hr::after{
+  content: "";
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  width: 150px;
+  height: 15px;
+  display: block;
+}
+
+/* SECTION SONG */
 .boxes{
   display: flex;
   flex-wrap: wrap;
   height: 100%;
   width: calc( 100% - 200px );
+  color: white;
 }
 
 
