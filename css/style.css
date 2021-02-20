@@ -373,6 +373,14 @@ footer{
     order: 2;
   }
 
+  .riproduzione > div:first-child{
+    order: 2
+  }
+
+  .tempo{
+    margin-bottom: 0;
+  }
+
   .volume{
     width: 140px;
     margin: auto;
