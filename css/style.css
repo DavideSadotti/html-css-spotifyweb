@@ -59,16 +59,61 @@ aside{
   z-index: 10;
 }
 
-@media screen and (max-width: 767px){
-  aside{
-    height: calc( 100vh - 160px );
-  }
+aside > div:nth-child(2) p{
+  display: inline-block;
+  margin-left: 5px;
+}
+
+aside > div:nth-child(3){
+  overflow: auto;
+}
+
+.logo-small{
+  display: none;
 }
 
 .spotify-logo{
   width: 130px;
   margin-top: 20px;
   margin-left: 20px;
+}
+
+.hr::after{
+  content: "";
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  width: 75%;
+  height: 15px;
+  display: block;
+}
+
+@media screen and (max-width: 767px){
+  aside{
+    height: calc( 100vh - 160px );
+    width: 80px;
+  }
+
+  aside > div:nth-child(2) p, aside > div:nth-child(3), aside > div:nth-child(4) p{
+    display: none;
+  }
+
+  .logo-small{
+    display: block;
+    width: 30px;
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+
+  .spotify-logo{
+    display: none;
+  }
+
+  .download-img{
+    margin-left: 5px;
+  }
+
+  .hr::after{
+    display: none;
+  }
 }
 
 aside div{
@@ -97,7 +142,7 @@ aside span{
   display: inline-block;
 }
 
-aside img{
+aside > div:nth-child(2) img, aside > div:nth-child(3) img{
   width: 20px;
   margin-right: 5px;
   vertical-align: bottom;
@@ -114,6 +159,7 @@ aside a{
 
 .border-left-green{
   border-left: 2px solid #6df719;
+  padding-left: 23px;
 }
 
 .user{
@@ -139,14 +185,6 @@ aside a{
   color: white;
 }
 
-.hr::after{
-  content: "";
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-  width: 150px;
-  height: 15px;
-  display: block;
-}
-
 /* SECTION SONG */
 .albums{
   display: flex;
@@ -157,6 +195,12 @@ aside a{
   padding: 20px;
   overflow: auto;
   padding-top: 80px;
+}
+
+@media screen and (max-width: 767px){
+  .albums{
+    width: calc( 100% - 80px );  
+  }
 }
 
 .albums > div:not(:first-child){
