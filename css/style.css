@@ -218,6 +218,10 @@ aside a:hover .opacity-md{
   margin-left: 5px;
 }
 
+.user div{
+  cursor: pointer;
+}
+
 .download-img{
   width: 15px;
   vertical-align: middle;
@@ -270,6 +274,7 @@ aside a:hover .opacity-md{
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.5);
   margin: 20px 10px;
+  cursor: pointer;
 }
 
 .navigazione ul li:first-child::after{
@@ -291,7 +296,7 @@ aside a:hover .opacity-md{
 }
 
 .albums h3{
-  font-size: 24px;
+  font-size: 30px;
   margin-bottom: 10px
 }
 
@@ -303,6 +308,7 @@ aside a:hover .opacity-md{
 .albums p{
   color: rgba(255, 255, 255, 0.5);
   font-size: 14px;
+  font-weight: 600;
 }
 
 .album-square img, .album-circle img{
@@ -319,10 +325,40 @@ aside a:hover .opacity-md{
   margin-right: 20px;
 }
 
+.album-square > div > div, .album-circle > div > div{
+  position: relative;
+  height: 200px;
+  cursor: pointer;
+}
+
+.album-square > div > div i, .album-circle > div > div i{
+  display: none;
+}
+
+.album-square > div > div:hover i, .album-circle > div > div:hover i{
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  z-index: 10;
+}
+
+.hover-overlay-album:hover::after{
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 5;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
 .navigazione li:hover{
   color: white;
 }
-
 
 /* -----------------FOOTER----------------- */
 footer{
