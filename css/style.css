@@ -62,6 +62,7 @@ header{
   background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
   top: 0;
+  z-index: 20;
 }
 
 .upgrade{
@@ -107,7 +108,7 @@ aside{
   display: flex;
   flex-direction: column;
   overflow: auto;
-  z-index: 10;
+  z-index: 30;
 }
 
 aside > div:nth-child(2) p{
