@@ -246,7 +246,7 @@ aside a:hover .opacity-md{
   height: 100%;
   width: calc( 100% - 200px );
   color: white;
-  padding: 20px;
+  padding: 20px 0 20px 20px;
   overflow: auto;
   padding-top: 80px;
 }
@@ -313,8 +313,7 @@ aside a:hover .opacity-md{
 }
 
 .album-square img, .album-circle img{
-  width: 200px;
-  height: 200px;
+  width: 100%;
 }
 
 .album-square > div, .album-circle > div{
@@ -322,13 +321,8 @@ aside a:hover .opacity-md{
   margin-top: 20px;
 }
 
-.album-square > div:not(:last-child), .album-circle > div:not(:last-child){
-  margin-right: 20px;
-}
-
 .album-square > div > div, .album-circle > div > div{
   position: relative;
-  height: 200px;
   cursor: pointer;
 }
 
@@ -346,6 +340,10 @@ aside a:hover .opacity-md{
   z-index: 10;
 }
 
+.album-circle > div, .album-circle > div > div, .album-circle img, .album-circle .hover-overlay-album:hover::after{
+  border-radius: 50%;
+}
+
 .hover-overlay-album:hover::after{
   content: "";
   display: block;
@@ -361,12 +359,55 @@ aside a:hover .opacity-md{
   color: white;
 }
 
+@media screen and (max-width: 467px){
+  .album-square > div, .album-circle > div{
+    margin-right: 20px;
+  }
+}
+
+@media screen and (min-width: 468px){
+  .album-square > div, .album-circle > div{
+    width: calc(( 100% - 40px) / 2);
+  }
+
+  .album-square > div, .album-circle > div{
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 767px){
+  .album-circle{
+    margin-bottom: 100px !important;
+  }
+}
+
+@media screen and (min-width: 768px){
+  .album-square > div, .album-circle > div{
+    width: calc(( 100% - 80px) / 4);
+  }
+
+  .album-square > div, .album-circle > div{
+    margin-right: 20px;
+  }
+}
+
+@media screen and (min-width: 1100px){
+  .album-square > div, .album-circle > div{
+    width: calc(( 100% - 120px) / 6);
+  }
+
+  .album-square > div, .album-circle > div{
+    margin-right: 20px;
+  }
+}
+
 /* -----------------FOOTER----------------- */
 footer{
   width: 100%;
   background-color: #282828;
   position: fixed;
   bottom: 0;
+  z-index: 10;
 }
 
 .player{
