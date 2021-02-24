@@ -90,6 +90,12 @@ header{
   outline: none;
 }
 
+@media screen and (max-height: 500px){
+  header{
+    display: none;
+  }
+}
+
 /* -----------------MAIN----------------- */
 main{
   display: flex;
@@ -254,6 +260,12 @@ aside a:hover .opacity-md{
 @media screen and (max-width: 767px){
   .albums{
     width: calc( 100% - 80px );
+  }
+}
+
+@media screen and (max-height: 500px){
+  .albums{
+    padding-top: 10px;
   }
 }
 
